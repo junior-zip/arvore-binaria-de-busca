@@ -1,5 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        ArvoreBinariaBusca<String> arvoreBinariaBusca = new ArvoreBinariaBusca<>();
+
+        try {
+            arvoreBinariaBusca.inserir("iae");
+
+        } catch (Exception e) {
+            System.out.println(e);
+
+        }
     }
 }
