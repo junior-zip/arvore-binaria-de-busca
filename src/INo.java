@@ -4,7 +4,7 @@ public interface INo<T> extends Comparable<T> {
     void setPai(No no);
     void setFilhoEsquerdo(No no);
     void setFilhoDireito(No no);
-    int getValor();
+    Object getValor();
     No getPai();
     No getFilhoEsquerdo();
     No getFilhoDireito();

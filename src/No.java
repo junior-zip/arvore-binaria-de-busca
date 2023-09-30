@@ -13,53 +13,54 @@ public class No<T extends Comparable<T>> implements INo<T> {
     }
 
 
-
-
-
-
-
     @Override
     public void setValor(T valor) {
+        this.valor = valor;
 
     }
-
     @Override
     public void setPai(No no) {
+        this.pai = no;
 
     }
 
     @Override
     public void setFilhoEsquerdo(No no) {
+        this.filhoEsquerdo = no;
 
     }
 
     @Override
     public void setFilhoDireito(No no) {
+        this.filhoDireito = no;
 
     }
 
     @Override
-    public int getValor() {
-        return 0;
+    public T getValor() {
+
+        return this.valor;
     }
 
     @Override
     public No getPai() {
-        return null;
+        return this.pai;
     }
 
     @Override
     public No getFilhoEsquerdo() {
-        return null;
+
+        return this.filhoEsquerdo;
     }
 
     @Override
     public No getFilhoDireito() {
-        return null;
+        return filhoDireito;
     }
 
     @Override
     public int compareTo(T o) {
+
         return 0;
     }
 }

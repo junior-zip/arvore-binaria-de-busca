@@ -16,31 +16,24 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         if(raiz == null){
             raiz = no;
         }else{
-            if(no.valor.compareTo(raiz.valor) < 0){
-                if(raiz.filhoEsquerdo == null){
-                    raiz.filhoEsquerdo = no;
+            if(no.valor.compareTo(raiz.getValor()) < 0){
+                if(raiz.getFilhoEsquerdo() == null){
+                    raiz.setFilhoEsquerdo(no);
                 }else{
-                    inserirRecursivo(no, raiz.filhoEsquerdo);
+                    inserirRecursivo(no, raiz.getFilhoEsquerdo());
                 }
             }else{
-                if (raiz.filhoDireito == null){
-                    raiz.filhoDireito = no;
+                if (raiz.getFilhoDireito() == null){
+                     raiz.setFilhoDireito(no);
                 }else{
-                    inserirRecursivo(no, raiz.filhoDireito);
+                    inserirRecursivo(no, raiz.getFilhoDireito());
                 }
             }
         }
     }
 
 
-
-
-
-    @Override
-    public No remover(Object valor) throws Exception {
-        return null;
-    }
-
+    // inacabado
     @Override
     public No removerRecursivo(No no, Object valor) throws Exception {
         if(no.valor == valor){
@@ -53,18 +46,109 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
             }else{
                 removerRecursivo(no.filhoEsquerdo, valor);
             }
-
         }else{
             if(no.filhoDireito.valor.equals(valor)){
-
+                removerNoDireita(no);
 
             }else{
                 removerRecursivo(no.filhoDireito, valor);
             }
         }
-
         return null;
     }
+
+    @Override
+    public No remover(Object v) throws Exception{
+
+        if(raiz == null){
+            throw new Exception("Sem valor para acessar!");
+        }
+        No atual = raiz;
+        No pai = raiz;
+        boolean filho_esq = true;
+
+        while(atual.getValor() != v) {
+            pai = atual;
+
+            if (atual.getValor().compareTo(v) < 0) {
+
+                atual = atual.getFilhoEsquerdo();
+                filho_esq = true;
+
+            } else {
+                atual = atual.getFilhoDireito();
+                filho_esq = false;
+            }
+            if (atual == null) {
+                return null;
+            }
+        }
+        if(atual.filhoEsquerdo == null && atual.filhoDireito == null){
+            if(atual == raiz){
+                raiz = null;
+
+            }else if(filho_esq){
+                pai.setFilhoEsquerdo(null);
+            }else{
+                pai.setFilhoDireito(null);
+            }
+        }else if(atual.getFilhoDireito() == null){
+            if(atual == raiz){
+                raiz = atual.getFilhoEsquerdo();
+
+            }else if(filho_esq){
+                pai.setFilhoEsquerdo(atual.getFilhoEsquerdo());
+
+            }else{
+                pai.setFilhoDireito(atual.getFilhoEsquerdo());
+            }
+
+        }else if(atual.getFilhoEsquerdo() == null){
+            if(atual == raiz){
+                raiz = atual.getFilhoDireito();
+
+            }else if(filho_esq){
+                pai.setFilhoEsquerdo( atual.getFilhoDireito());
+
+            }else{
+                pai.setFilhoDireito(atual.getFilhoDireito());
+            }
+        }else{
+            No sucessor = no_sucessor(atual);
+
+            if(atual == raiz){
+                raiz = sucessor;
+            }else if(filho_esq){
+                pai.setFilhoEsquerdo(sucessor);
+            }else{
+                pai.setFilhoDireito(sucessor);
+            }
+            sucessor.setFilhoEsquerdo( atual.getFilhoEsquerdo());
+        }
+        return atual;
+    }
+
+    public No no_sucessor(No apaga){
+
+        No paiDoSucessor = apaga;
+        No sucessor = apaga;
+        No atual = apaga.getFilhoDireito();
+        while(atual != null){
+
+            paiDoSucessor = sucessor;
+            sucessor = atual;
+            atual = atual.getFilhoEsquerdo();
+        }
+        if(sucessor != apaga.getFilhoDireito()){
+            paiDoSucessor.setFilhoEsquerdo(sucessor.getFilhoDireito());
+            sucessor.setFilhoDireito(apaga.getFilhoDireito());
+        }
+        return sucessor;
+    }
+
+    
+
+
 
     @Override
     public No buscar(No no) throws Exception {
@@ -89,7 +173,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
                 ret = buscaNo(arvore.filhoDireito, valor);
             }
         }
-
         return ret;
     }
 
@@ -120,6 +203,7 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         }
     }
     //----------
+    //inacabado
     public void removerNoDireita(No<T> noPai){
         int filhos = 0;
         No<T> noRemover = null;
@@ -132,13 +216,9 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
 
         }else if(filhos ==1 ){
             removerFilhosDireita(noPai, "D");
-
-
         }else if(filhos == 3){
-
+            //removerFilhosEsqDir();
         }
-
-
     }
 
     //-------------
@@ -148,14 +228,7 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         }else{
             noPai.filhoDireito = noPai.filhoDireito.filhoDireito;
         }
-
     }
-
-
-
-
-
-
 
     @Override
     public No visitar(No no) throws Exception {
@@ -169,7 +242,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
          * @return true se houver um ou mais nos na arvore
          * @return false se nao houver elementos na arvore
          */
-
         return this.raiz == null;
     }
 
@@ -192,7 +264,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         if(no.filhoDireito != null){
             preOrdem(no.filhoDireito);
         }
-
     }
 
     @Override
@@ -205,7 +276,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         if(no.filhoDireito != null){
             emOrdem(no.filhoDireito);
         }
-
     }
 
     @Override
@@ -217,7 +287,5 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
             posOrdem(no.filhoDireito);
         }
         System.out.println(no.valor);
-
     }
-
 }
