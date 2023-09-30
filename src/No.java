@@ -1,9 +1,22 @@
-public class No<T> implements INo<T>{
+public class No<T extends Comparable<T>> implements INo<T> {
 
     T valor;
     No<T> filhoEsquerdo;
     No<T> filhoDireito;
     No<T> pai;
+
+    public No(T valor){
+        this.valor = valor;
+        this.filhoEsquerdo = null;
+        this.filhoDireito = null;
+
+    }
+
+
+
+
+
+
 
     @Override
     public void setValor(T valor) {
