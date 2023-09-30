@@ -18,7 +18,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         }
     }
 
-
     public void inserirRecursivo(No atual, T valor) throws Exception {
         if (valor.compareTo((T) atual.getValor()) < 0) {
             if (atual.getFilhoEsquerdo() == null) {
@@ -34,7 +33,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
             }
         }
     }
-
 
     @Override
     public void inserir(Object valor) throws Exception {
@@ -93,10 +91,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         return null;
     }
 
-
-    //---------------------------------
-
-
     public No buscar(No no, Object valor) throws Exception{
         No<T> ret;
 
@@ -116,11 +110,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         }
         return ret;
     }
-
-
-
-
-
 
     @Override
     public No visitar(No no) throws Exception {
@@ -149,35 +138,35 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
 
     @Override
     public void preOrdem(No no) {
-        System.out.println(no.valor);
-        if(no.filhoEsquerdo != null){
-            preOrdem(no.filhoEsquerdo);
+        System.out.println(no.getValor());
+        if(no.getFilhoEsquerdo() != null){
+            preOrdem(no.getFilhoEsquerdo());
         }
-        if(no.filhoDireito != null){
-            preOrdem(no.filhoDireito);
+        if(no.getFilhoDireito() != null){
+            preOrdem(no.getFilhoDireito());
         }
     }
 
     @Override
     public void emOrdem(No no) {
 
-        if(no.filhoEsquerdo != null){
-            emOrdem(no.filhoEsquerdo);
+        if(no.getFilhoEsquerdo() != null){
+            emOrdem(no.getFilhoEsquerdo());
         }
-        System.out.println(no.valor);
-        if(no.filhoDireito != null){
-            emOrdem(no.filhoDireito);
+        System.out.println(no.getValor());
+        if(no.getFilhoDireito() != null){
+            emOrdem(no.getFilhoDireito());
         }
     }
 
     @Override
     public void posOrdem(No no) {
-        if(no.filhoEsquerdo != null){
-            posOrdem(no.filhoEsquerdo);
+        if(no.getFilhoDireito() != null){
+            posOrdem(no.getFilhoEsquerdo());
         }
-        if(no.filhoDireito != null){
-            posOrdem(no.filhoDireito);
+        if(no.getFilhoDireito() != null){
+            posOrdem(no.getFilhoDireito());
         }
-        System.out.println(no.valor);
+        System.out.println(no.getValor());
     }
 }
