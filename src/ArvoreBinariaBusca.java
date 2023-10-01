@@ -8,12 +8,25 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
 
     @Override
     public void inserir(Object valor) throws Exception {
+
+        /***
+         * Metodo publico para a insercao de um valor na arvore
+         * @exception Exception caso valor inserido seja nulo
+         * @param valor recebe o valor a ser inserido na arvore
+         */
+
+        if (valor == null) throw new RuntimeException("Nao ha como inserir um valor nulo");
+
         this.raiz = inserirRecursivo(this.raiz, valor);
     }
 
     private No inserirRecursivo(No no, Object valor) {
+
         /**
-         * Uma função recursiva para inserir um novo valor na arvore
+         * Um Metodo privado recursiva para inserir um novo valor na arvore
+         * @param no recebe o no a ser analizado e comparado com o valor a inserir
+         * @param valor recebe o valor que sera incluido na arvore
+         * @return o no atualizado com seu pai e filhos
          */
 
         if (no == null) {
@@ -22,19 +35,94 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         }
 
         if (no.getValor().compareTo(valor) > 0) {
-            /** Se o no for igual a nulo */
+            /** Se o valor do no for maior do que o valor inserido, vai pra esquerda */
             no.setFilhoEsquerdo(inserirRecursivo(no.getFilhoEsquerdo(), valor));
+
         } else if (no.getValor().compareTo(valor) < 0) {
-            /** Se o no for igual a nulo */
+            /** Se o valor do no for menor do que o valor inserido, vai pra direita */
             no.setFilhoDireito(inserirRecursivo(no.getFilhoDireito(), valor));
         }
 
         return no;
     }
 
-    @Override
-    public No removerRecursivo(No no, Object valor) throws Exception {
-        return null;
+    public No remover(Object valor) throws Exception {
+
+        /***
+         * Metodo publico para a remocao de um valor na arvore
+         * @param valor recebe o valor a ser removido na arvore
+         * @exception Exception caso valor inserido seja nulo
+         * @return no removido da arvore
+         */
+
+        if (valor == null) throw new RuntimeException("Nao ha como remover um valor nulo");
+
+        return removerRecursivo(this.raiz, valor);
+    }
+
+    private No removerRecursivo(No no, Object valor) {
+
+        /**
+         * Uma função recursiva para remover um valor na arvore, considerando que ha 3 casos
+         * @param no recebe o no a ser analizado e comparado com o valor a remover
+         * @param valor recebe o valor que sera removido na arvore
+         */
+
+        // Base case
+        if (no == null)
+            return no;
+
+        // Recursive calls for ancestors of
+        // No to be deleted
+        if (no.getValor().compareTo(valor) > 0) {
+            no.setFilhoEsquerdo(removerRecursivo(no.getFilhoEsquerdo(), valor));
+            return no;
+        } else if (no.getValor().compareTo(valor) < 0) {
+            no.setFilhoDireito(removerRecursivo(no.getFilhoDireito(), valor));
+            return no;
+        }
+
+        // We reach here when no is the No
+        // to be deleted.
+
+        // If one of the children is empty
+        if (no.getFilhoEsquerdo() == null) {
+            No temp = no.getFilhoDireito();
+            return temp;
+        } else if (no.getFilhoDireito() == null) {
+            No temp = no.getFilhoEsquerdo();
+            return temp;
+        }
+
+        // If both children exist
+        else {
+
+            No noAuxiliar = no;
+
+            // Find successor
+            No succ = no.getFilhoDireito();
+            while (succ.getFilhoEsquerdo() != null) {
+                noAuxiliar = succ;
+                succ = succ.getFilhoEsquerdo();
+            }
+
+            // Delete successor.  Since successor
+            // is always getFilhoEsquerdo() child of its parent
+            // we can safely make successor's getFilhoDireito()
+            // getFilhoDireito() child as getFilhoEsquerdo() of its parent.
+            // If there is no succ, then assign
+            // succ.getFilhoDireito() to noAuxiliar.getFilhoDireito()
+            if (noAuxiliar != no)
+                noAuxiliar.setFilhoEsquerdo(succ.getFilhoDireito());
+            else
+                noAuxiliar.setFilhoDireito(succ.getFilhoDireito());
+
+            // Copy Successor Data to no
+            no.valor = succ.valor;
+
+            // Delete Successor and return no
+            return no;
+        }
     }
 
     @Override
@@ -60,6 +148,11 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
     @Override
     public void preOrdem(No no) {
 
+        /**
+         * Metodo para percorrer a arvore em forma de pre-ordem (visitacao, esquerda, direita)
+         * @param no recebe o no que sera analisado em pre-ordem
+         */
+
         if (no == null) return;
 
         no.visitar();
@@ -70,6 +163,11 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
     @Override
     public void emOrdem(No no) {
 
+        /**
+         * Metodo para percorrer a arvore em forma de em-ordem (esquerda, visitacao, direita)
+         * @param no recebe o no que sera analisado em em-ordem
+         */
+
         if (no == null) return;
 
         preOrdem(no.getFilhoEsquerdo());
@@ -79,6 +177,11 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
 
     @Override
     public void posOrdem(No no) {
+
+        /**
+         * Metodo para percorrer a arvore em forma de pos-ordem (esquerda, direita, visitacao)
+         * @param no recebe o no que sera analisado em pos-ordem
+         */
 
         if (no == null) return;
 
@@ -168,7 +271,7 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         return ret;
     }
 
-    public No remover(Object valor) throws Exception {
+    public No remover_(Object valor) throws Exception {
         if (raiz == null) {
             throw new Exception("Árvore vazia. Não é possível remover.");
         }

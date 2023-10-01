@@ -50,6 +50,6 @@ public class No<T extends Comparable<T>> implements INo<T> {
         return filhoDireito;
     }
     public void visitar() {
-        System.out.print(this.getValor() + " - ");
+        System.out.print(this.getValor());
     }
 }
