@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80cbdf18-b028-4987-ab80-a47a81b3fde6" name="Changes" comment="">
+    <list default="true" id="2fc8d4b2-1e0e-4a81-9077-26af78fd71ee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
+      <change beforePath="$PROJECT_DIR$/src/ArvoreBinariaBusca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArvoreBinariaBusca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IArvore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IArvore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IArvoreBinaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IArvoreBinaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/INo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/INo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
->>>>>>> e34376046ceb54f040431055e166c33c8ef6663c
+      <change beforePath="$PROJECT_DIR$/src/No.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/No.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,14 +23,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
 }]]></component>
->>>>>>> e34376046ceb54f040431055e166c33c8ef6663c
-  <component name="ProjectId" id="2W1YjQgPeyaFWUCsNb69ArWvvod" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2W8fuFF7H6cA464TxotBGTyvTeV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,12 +56,47 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="80cbdf18-b028-4987-ab80-a47a81b3fde6" name="Changes" comment="" />
-      <created>1695901693153</created>
+      <changelist id="2fc8d4b2-1e0e-4a81-9077-26af78fd71ee" name="Changes" comment="" />
+      <created>1696119348949</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695901693153</updated>
+      <updated>1696119348949</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/ArvoreBinariaBusca.java</url>
+          <line>13</line>
+          <properties class="ArvoreBinariaBusca" method="inserirRecursivo">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ArvoreBinariaBusca.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ArvoreBinariaBusca.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ArvoreBinariaBusca.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ArvoreBinariaBusca.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

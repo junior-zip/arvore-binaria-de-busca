@@ -6,7 +6,120 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         this.raiz = null;
     }
 
-    public void inserir(No no, Object valor) throws Exception {
+    @Override
+    public void inserir(Object valor) throws Exception {
+        this.raiz = inserirRecursivo(this.raiz, valor);
+    }
+
+    private No inserirRecursivo(No no, Object valor) {
+        /**
+         * Uma função recursiva para inserir um novo valor na arvore
+         */
+
+        if (no == null) {
+            /** Se o no for igual a nulo */
+            return new No((Comparable) valor);
+        }
+
+        if (no.getValor().compareTo(valor) > 0) {
+            /** Se o no for igual a nulo */
+            no.setFilhoEsquerdo(inserirRecursivo(no.getFilhoEsquerdo(), valor));
+        } else if (no.getValor().compareTo(valor) < 0) {
+            /** Se o no for igual a nulo */
+            no.setFilhoDireito(inserirRecursivo(no.getFilhoDireito(), valor));
+        }
+
+        return no;
+    }
+
+    @Override
+    public No removerRecursivo(No no, Object valor) throws Exception {
+        return null;
+    }
+
+    @Override
+    public boolean estaVazia() {
+        /**
+         * Retorna se a arvore esta vazia
+         * @return true se houver um ou mais nos na arvore
+         * @return false se nao houver elementos na arvore
+         */
+        return this.raiz == null;
+    }
+
+    @Override
+    public boolean estaCompleta() {
+        return false;
+    }
+
+    @Override
+    public int getAltura() {
+        return 0;
+    }
+
+    @Override
+    public void preOrdem(No no) {
+
+        if (no == null) return;
+
+        no.visitar();
+        preOrdem(no.getFilhoEsquerdo());
+        preOrdem(no.getFilhoDireito());
+    }
+
+    @Override
+    public void emOrdem(No no) {
+
+        if (no == null) return;
+
+        preOrdem(no.getFilhoEsquerdo());
+        no.visitar();
+        preOrdem(no.getFilhoDireito());
+    }
+
+    @Override
+    public void posOrdem(No no) {
+
+        if (no == null) return;
+
+        preOrdem(no.getFilhoEsquerdo());
+        preOrdem(no.getFilhoDireito());
+        no.visitar();
+    }
+
+    ////////////////////////////////////////////////////////
+    public void preOrdem_(No no) {
+        System.out.println(no.getValor());
+        if(no.getFilhoEsquerdo() != null){
+            preOrdem(no.getFilhoEsquerdo());
+        }
+        if(no.getFilhoDireito() != null){
+            preOrdem(no.getFilhoDireito());
+        }
+    }
+
+    public void emOrdem_(No no) {
+
+        if(no.getFilhoEsquerdo() != null){
+            emOrdem(no.getFilhoEsquerdo());
+        }
+        System.out.println(no.getValor());
+        if(no.getFilhoDireito() != null){
+            emOrdem(no.getFilhoDireito());
+        }
+    }
+
+    public void posOrdem_(No no) {
+        if(no.getFilhoDireito() != null){
+            posOrdem(no.getFilhoEsquerdo());
+        }
+        if(no.getFilhoDireito() != null){
+            posOrdem(no.getFilhoDireito());
+        }
+        System.out.println(no.getValor());
+    }
+
+    public void inserir_(No no, Object valor) throws Exception {
         if (valor == null) {
             throw new IllegalArgumentException("Valor não pode ser nulo.");
         }
@@ -18,7 +131,7 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         }
     }
 
-    public void inserirRecursivo(No atual, T valor) throws Exception {
+    public void inserir_Recursivo(No atual, T valor) throws Exception {
         if (valor.compareTo((T) atual.getValor()) < 0) {
             if (atual.getFilhoEsquerdo() == null) {
                 atual.setFilhoEsquerdo(new No(valor));
@@ -34,14 +147,25 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
         }
     }
 
-    @Override
-    public void inserir(Object valor) throws Exception {
+    public No buscar(No no, Object valor) throws Exception{
+        No<T> ret;
 
-    }
+        if(no == null){
+            throw new Exception("Operação incapaz de ser realizada!");
 
-    @Override
-    public void inserirRecursivo(No no, Object valor) {
+        }else if(no.getValor() == valor){
+            ret = (No<T>) no.getValor();
 
+        }else{
+
+            if(no.getValor().compareTo(valor) > 0){
+                ret =  buscar(no.getFilhoEsquerdo(), valor);
+
+            }else{
+                ret = buscar(no.getFilhoDireito(), valor);
+            }
+        }
+        return ret;
     }
 
     public No remover(Object valor) throws Exception {
@@ -83,90 +207,5 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
             atual = atual.getFilhoEsquerdo();
         }
         return menorValor;
-    }
-
-
-    @Override
-    public No removerRecursivo(No no, Object valor) throws Exception {
-        return null;
-    }
-
-    public No buscar(No no, Object valor) throws Exception{
-        No<T> ret;
-
-        if(no == null){
-           throw new Exception("Operação incapaz de ser realizada!");
-
-        }else if(no.getValor() == valor){
-            ret = (No<T>) no.getValor();
-
-        }else{
-            if(no.getValor().compareTo(valor) > 0){
-                ret =  buscar(no.getFilhoEsquerdo(), valor);
-
-            }else{
-                ret = buscar(no.getFilhoDireito(), valor);
-            }
-        }
-        return ret;
-    }
-
-    @Override
-    public No visitar(No no) throws Exception {
-        return null;
-    }
-
-    @Override
-    public boolean estaVazia() {
-        /**
-         * Retorna se a arvore esta vazia
-         * @return true se houver um ou mais nos na arvore
-         * @return false se nao houver elementos na arvore
-         */
-        return this.raiz == null;
-    }
-
-    @Override
-    public boolean estaCompleta() {
-        return false;
-    }
-
-    @Override
-    public int getAltura() {
-        return 0;
-    }
-
-    @Override
-    public void preOrdem(No no) {
-        System.out.println(no.getValor());
-        if(no.getFilhoEsquerdo() != null){
-            preOrdem(no.getFilhoEsquerdo());
-        }
-        if(no.getFilhoDireito() != null){
-            preOrdem(no.getFilhoDireito());
-        }
-    }
-
-    @Override
-    public void emOrdem(No no) {
-
-        if(no.getFilhoEsquerdo() != null){
-            emOrdem(no.getFilhoEsquerdo());
-        }
-        System.out.println(no.getValor());
-        if(no.getFilhoDireito() != null){
-            emOrdem(no.getFilhoDireito());
-        }
-    }
-
-    @Override
-    public void posOrdem(No no) {
-        if(no.getFilhoDireito() != null){
-            posOrdem(no.getFilhoEsquerdo());
-        }
-        if(no.getFilhoDireito() != null){
-            posOrdem(no.getFilhoDireito());
-        }
-        System.out.println(no.getValor());
     }
 }
