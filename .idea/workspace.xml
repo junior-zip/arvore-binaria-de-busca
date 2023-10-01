@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fc8d4b2-1e0e-4a81-9077-26af78fd71ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ArvoreBinariaBuscaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/arvore-binaria-de-busca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/arvore-binaria-de-busca.iml" afterDir="false" />
     </list>
@@ -25,9 +23,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2W8fuFF7H6cA464TxotBGTyvTeV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,7 +46,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "last_opened_file_path": "C:/Users/carlo/IdeaProjects/arvore-binaria-de-busca",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -60,7 +61,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArvoreBinariaBuscaTest.posOrdem">
+  <component name="RunManager" selected="JUnit.ArvoreBinariaBuscaTest.inserir">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="arvore-binaria-de-busca" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ArvoreBinariaBuscaTest.emOrdem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="arvore-binaria-de-busca" />
       <option name="PACKAGE_NAME" value="" />
@@ -71,11 +79,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArvoreBinariaBuscaTest.estaVazia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArvoreBinariaBuscaTest.inserir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="arvore-binaria-de-busca" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ArvoreBinariaBuscaTest" />
-      <option name="METHOD_NAME" value="estaVazia" />
+      <option name="METHOD_NAME" value="inserir" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -101,23 +109,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArvoreBinariaBuscaTest.remover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="arvore-binaria-de-busca" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ArvoreBinariaBuscaTest" />
-      <option name="METHOD_NAME" value="remover" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.inserir" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ArvoreBinariaBuscaTest.posOrdem" />
         <item itemvalue="JUnit.ArvoreBinariaBuscaTest.emOrdem" />
         <item itemvalue="JUnit.ArvoreBinariaBuscaTest.preOrdem" />
-        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.estaVazia" />
-        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.remover" />
       </list>
     </recent_temporary>
   </component>

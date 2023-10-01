@@ -1,0 +1,483 @@
+Index: .idea/misc.xml
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ /dev/null	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: arvore-binaria-de-busca.iml
+===================================================================
+diff --git a/arvore-binaria-de-busca.iml b/arvore-binaria-de-busca.iml
+deleted file mode 100644
+--- a/arvore-binaria-de-busca.iml	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ /dev/null	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="junit.jupiter" level="project" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ /dev/null	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ /dev/null	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/arvore-binaria-de-busca.iml" filepath="$PROJECT_DIR$/arvore-binaria-de-busca.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/libraries/junit_jupiter.xml
+===================================================================
+diff --git a/.idea/libraries/junit_jupiter.xml b/.idea/libraries/junit_jupiter.xml
+deleted file mode 100644
+--- a/.idea/libraries/junit_jupiter.xml	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ /dev/null	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
+@@ -1,17 +0,0 @@
+-<component name="libraryTable">
+-  <library name="junit.jupiter" type="repository">
+-    <properties maven-id="org.junit.jupiter:junit-jupiter:5.9.1" />
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.9.1/junit-jupiter-5.9.1.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.9.1/junit-jupiter-params-5.9.1.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+deleted file mode 100644
+--- a/.idea/workspace.xml	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ /dev/null	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
+@@ -1,135 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="AutoImportSettings">
+-    <option name="autoReloadType" value="SELECTIVE" />
+-  </component>
+-  <component name="ChangeListManager">
+-    <list default="true" id="2fc8d4b2-1e0e-4a81-9077-26af78fd71ee" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/ArvoreBinariaBuscaTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/arvore-binaria-de-busca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/arvore-binaria-de-busca.iml" afterDir="false" />
+-    </list>
+-    <option name="SHOW_DIALOG" value="false" />
+-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-    <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="JUnit5 Test Class" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 5
+-}]]></component>
+-  <component name="ProjectId" id="2W8fuFF7H6cA464TxotBGTyvTeV" />
+-  <component name="ProjectViewState">
+-    <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showLibraryContents" value="true" />
+-  </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+-    "create.test.in.the.same.root": "true",
+-    "git-widget-placeholder": "main",
+-    "last_opened_file_path": "C:/Users/carlo/IdeaProjects/arvore-binaria-de-busca",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0"
+-  }
+-}]]></component>
+-  <component name="RecentsManager">
+-    <key name="CreateTestDialog.Recents.Supers">
+-      <recent name="" />
+-    </key>
+-    <key name="CreateTestDialog.RecentsKey">
+-      <recent name="" />
+-    </key>
+-  </component>
+-  <component name="RunManager" selected="JUnit.ArvoreBinariaBuscaTest.posOrdem">
+-    <configuration name="ArvoreBinariaBuscaTest.emOrdem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="arvore-binaria-de-busca" />
+-      <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="ArvoreBinariaBuscaTest" />
+-      <option name="METHOD_NAME" value="emOrdem" />
+-      <option name="TEST_OBJECT" value="method" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="ArvoreBinariaBuscaTest.estaVazia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="arvore-binaria-de-busca" />
+-      <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="ArvoreBinariaBuscaTest" />
+-      <option name="METHOD_NAME" value="estaVazia" />
+-      <option name="TEST_OBJECT" value="method" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="ArvoreBinariaBuscaTest.posOrdem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="arvore-binaria-de-busca" />
+-      <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="ArvoreBinariaBuscaTest" />
+-      <option name="METHOD_NAME" value="posOrdem" />
+-      <option name="TEST_OBJECT" value="method" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="ArvoreBinariaBuscaTest.preOrdem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="arvore-binaria-de-busca" />
+-      <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="ArvoreBinariaBuscaTest" />
+-      <option name="METHOD_NAME" value="preOrdem" />
+-      <option name="TEST_OBJECT" value="method" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="ArvoreBinariaBuscaTest.remover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+-      <module name="arvore-binaria-de-busca" />
+-      <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="ArvoreBinariaBuscaTest" />
+-      <option name="METHOD_NAME" value="remover" />
+-      <option name="TEST_OBJECT" value="method" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.posOrdem" />
+-        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.emOrdem" />
+-        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.preOrdem" />
+-        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.estaVazia" />
+-        <item itemvalue="JUnit.ArvoreBinariaBuscaTest.remover" />
+-      </list>
+-    </recent_temporary>
+-  </component>
+-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-  <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task">
+-      <changelist id="2fc8d4b2-1e0e-4a81-9077-26af78fd71ee" name="Changes" comment="" />
+-      <created>1696119348949</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1696119348949</updated>
+-    </task>
+-    <servers />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>### IntelliJ IDEA ###\r\nout/\r\n!**/src/main/**/out/\r\n!**/src/test/**/out/\r\n\r\n### Eclipse ###\r\n.apt_generated\r\n.classpath\r\n.factorypath\r\n.project\r\n.settings\r\n.springBeans\r\n.sts4-cache\r\nbin/\r\n!**/src/main/**/bin/\r\n!**/src/test/**/bin/\r\n\r\n### NetBeans ###\r\n/nbproject/private/\r\n/nbbuild/\r\n/dist/\r\n/nbdist/\r\n/.nb-gradle/\r\n\r\n### VS Code ###\r\n.vscode/\r\n\r\n### Mac OS ###\r\n.DS_Store
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ b/.gitignore	(date 1696127987866)
+@@ -1,4 +1,5 @@
+ ### IntelliJ IDEA ###
++.idea/
+ out/
+ !**/src/main/**/out/
+ !**/src/test/**/out/
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+new file mode 100644
+--- /dev/null	(date 1696127888839)
++++ b/README.md	(date 1696127888839)
+@@ -0,0 +1,192 @@
++
++# Árvore Binária de Busca
++
++
++
++
++
++## Objetivo
++
++- Repositório dedicado a realização da árvore binária de busca e seus métodos para a matéria de ED2 - IFS
++
++
++
++## Introdução  
++-   Uma árvore de busca criada a partir de um conjunto de valores não é única: o resultado
++    depende da seqüência de inserção dos dados. A grande utilidade da árvore binária de busca é armazenar dados contra os quais outros dados são freqüentemente verificados. Uma árvore de busca binária é dinâmica e pode sofrer alterações (inserções e remoções de nós) após ter sido criada. 
++
++    → operações básicas em uma Árvore Binária de Busca são:
++    
++    → inserção.
++        
++    → remoção.
++
++    → busca. 
++
++    ### Passos do algoritmo de inserção:    
++    → 1 - Procure um “local” para inserir o novo nó, começando a procura a partir do nó-raiz.
++
++    → 2 - Para cada nó-raiz de uma sub-árvore, compare; se o novo nó possui um valor menor do que o valor nó raiz (vai para sub-árvore esquerda), ou se o valor é maior que o valor no nó-raiz (vai para sub-árvore direita).
++    
++    → 3 - Se uma referência (filho esquerdo/direito de um nó raiz) nula é atingida, coloque o novo nó como sendo filho do nó-raiz.
++    ### Exemplo
++      ~~~JAVA
++      public void inserir_(No no, Object valor) throws Exception {
++        if (valor == null) {
++            throw new IllegalArgumentException("Valor não pode ser nulo.");
++        }
++
++        if (raiz == null) {
++            raiz = new No((Comparable) valor);
++        } else {
++            inserirRecursivo(raiz, valor);
++        }
++    }
++
++    public void inserir_Recursivo(No atual, T valor) throws Exception {
++        if (valor.compareTo((T) atual.getValor()) < 0) {
++            if (atual.getFilhoEsquerdo() == null) {
++                atual.setFilhoEsquerdo(new No(valor));
++            } else {
++                inserirRecursivo(atual.getFilhoEsquerdo(), valor);
++            }
++        } else {
++            if (atual.getFilhoDireito() == null) {
++                atual.setFilhoDireito(new No(valor));
++            } else {
++                inserirRecursivo(atual.getFilhoDireito(), valor);
++            }
++        }
++    }
++    ~~~
++
++    ### Passos do algoritmo de Busca: 
++    → 1 - Comece a busca a partir do nó-raiz.
++
++    → 2 - Para cada nó-raiz de uma sub-árvore compare:
++
++    → Se o valor procurado é menor que o valor no nó-raiz (continua pela sub-árvore esquerda), ou se o valor é maior que o valor no nó-raiz (sub-árvore direita);
++
++    → Caso o nó contendo o valor pesquisado seja encontrado, retorne o nó; caso contrário retorne nulo.
++    ### Exemplo    
++    ~~~JAVA
++    public No buscar(No no, Object valor) throws Exception{
++        No<T> ret;
++
++        if(no == null){
++            throw new Exception("Operação incapaz de ser realizada!");
++
++        }else if(no.getValor() == valor){
++            ret = (No<T>) no.getValor();
++
++        }else{
++
++            if(no.getValor().compareTo(valor) > 0){
++                ret =  buscar(no.getFilhoEsquerdo(), valor);
++
++            }else{
++                ret = buscar(no.getFilhoDireito(), valor);
++            }
++        }
++        return ret;
++    }
++    ~~~~
++    ### Passos do algoritmo de Remoção:
++    
++    → Para a remoção de um nó em uma árvore binária, devem ser considerados três casos: 
++
++    → Caso 1: o nó é folha.
++        
++        → O nó pode ser retirado sem problemas.
++
++    → Caso 2: o nó possui uma sub-árvore (esq./dir.).
++
++        → O nó-raiz da sub-árvore (esq./dir.) “ocupa” o lugar do nó retirado.
++
++    → Caso 3: o nó possui duas sub-árvores.
++
++        → O nó contendo o menor valor da sub-árvore direita pode “ocupar” o lugar; ou o maior valor da sub-árvore esquerda pode “ocupar” o lugar. 
++
++    
++    ### Exemplo    
++    ~~~JAVA
++
++    public No remover(Object valor) throws Exception {
++
++        /***
++         * Metodo publico para a remocao de um valor na arvore
++         * @param valor recebe o valor a ser removido na arvore
++         * @exception Exception caso valor inserido seja nulo
++         * @return no removido da arvore
++         */
++
++        if (valor == null) throw new RuntimeException("Nao ha como remover um valor nulo");
++
++        return removerRecursivo(this.raiz, valor);
++    }
++
++    private No removerRecursivo(No no, Object valor) {
++
++        /**
++         * Uma função recursiva para remover um valor na arvore, considerando que ha 3 casos
++         * @param no recebe o no a ser analizado e comparado com o valor a remover
++         * @param valor recebe o valor que sera removido na arvore
++         */
++
++        /** Se o no for igual a nulo */
++        if (no == null) return no;
++
++        /** CASO 1: Se o nao houver nenhum nó filho */
++        if (no.getValor().compareTo(valor) > 0) {
++            no.setFilhoEsquerdo(removerRecursivo(no.getFilhoEsquerdo(), valor));
++            return no;
++        } else if (no.getValor().compareTo(valor) < 0) {
++            no.setFilhoDireito(removerRecursivo(no.getFilhoDireito(), valor));
++            return no;
++        }
++
++        /** CASO 2: Se houver um nó filho */
++        if (no.getFilhoEsquerdo() == null) {
++            No temp = no.getFilhoDireito();
++            return temp;
++        } else if (no.getFilhoDireito() == null) {
++            No temp = no.getFilhoEsquerdo();
++            return temp;
++        }
++
++        /** CASO 3: Se houver dois nós filho */
++        else {
++            No noAuxiliar = no;
++
++            No noSucessor = no.getFilhoDireito();
++            while (noSucessor.getFilhoEsquerdo() != null) {
++                noAuxiliar = noSucessor;
++                noSucessor = noSucessor.getFilhoEsquerdo();
++            }
++            if (noAuxiliar != no)
++                noAuxiliar.setFilhoEsquerdo(noSucessor.getFilhoDireito());
++            else
++                noAuxiliar.setFilhoDireito(noSucessor.getFilhoDireito());
++
++            no.valor = noSucessor.valor;
++            
++            return no;
++        }
++    }
++    ~~~
++
++## Nota
++
++- Todo o conteúdo citado neste repositório é de objetivo acadêmico. Os códigos adicionados nesse readme estão commitados logo acima. Qualquer ajuda ou pedido de pull request é bem vindo e será analisado. 
++#
++ 
++## Referência
++ - [UFPE - Árvore Binárias de Busca](https://www.cin.ufpe.br/~dmrac/aula%20de%20arvore%20binaria%20de%20busca.pdf)
++ - [USP - Árvores Binárias de busca](https://www.ime.usp.br/~pf/algoritmos/aulas/binst.html)
++ - [Estruturas de Dados 27 [ ÁRVORE BINÁRIA DE BUSCA ]](https://www.youtube.com/watch?v=qegzdaeYIAM&t=1s)
++
++- [Estruturas de Dados: algoritmos, análise da complexidade e implementações em JAVA e C/C++](https://github.com/free-educa/books/blob/main/books/Estrutura%20de%20Dados%2C%20algoritmos%2C%20an%C3%A1lise%20da%20complexidade%20e%20implementa%C3%A7%C3%B5es%20em%20Java%20e%20C%2C%20C--.pdf)
++## Suporte
++
++Para ajuda, mande um email para junior26bmx@gmail.com ou para contato.albertosantana@gmail.com.
++
+Index: src/ArvoreBinariaBusca.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinaria {\r\n\r\n    No<T> raiz;\r\n\r\n    public ArvoreBinariaBusca() {\r\n        this.raiz = null;\r\n    }\r\n\r\n    @Override\r\n    public void inserir(Object valor) throws Exception {\r\n\r\n        /***\r\n         * Metodo publico para a insercao de um valor na arvore\r\n         * @exception Exception caso valor inserido seja nulo\r\n         * @param valor recebe o valor a ser inserido na arvore\r\n         */\r\n\r\n        if (valor == null) throw new RuntimeException(\"Nao ha como inserir um valor nulo\");\r\n\r\n        this.raiz = inserirRecursivo(this.raiz, valor);\r\n    }\r\n\r\n    private No inserirRecursivo(No no, Object valor) {\r\n\r\n        /**\r\n         * Um Metodo privado recursiva para inserir um novo valor na arvore\r\n         * @param no recebe o no a ser analizado e comparado com o valor a inserir\r\n         * @param valor recebe o valor que sera incluido na arvore\r\n         * @return o no atualizado com seu pai e filhos\r\n         */\r\n\r\n        if (no == null) {\r\n            /** Se o no for igual a nulo */\r\n            return new No((Comparable) valor);\r\n        }\r\n\r\n        if (no.getValor().compareTo(valor) > 0) {\r\n            /** Se o valor do no for maior do que o valor inserido, vai pra esquerda */\r\n            no.setFilhoEsquerdo(inserirRecursivo(no.getFilhoEsquerdo(), valor));\r\n\r\n        } else if (no.getValor().compareTo(valor) < 0) {\r\n            /** Se o valor do no for menor do que o valor inserido, vai pra direita */\r\n            no.setFilhoDireito(inserirRecursivo(no.getFilhoDireito(), valor));\r\n        }\r\n\r\n        return no;\r\n    }\r\n\r\n    @Override\r\n    public No buscar(No no, Object valor) throws Exception {\r\n\r\n        /**\r\n         * Metodo para buscar se o valor e existente dentro da arvore\r\n         * @param no recebe o no que sera comparado com o valor\r\n         * @param valor recebe o valor que tentara ser encontrado dentro da arvore\r\n         * @exception Exception caso o valor inserido seja nulo\r\n         * @return o no caso seja achado, caso nao, retorna null\r\n         */\r\n\r\n        if (valor == null) throw new RuntimeException(\"Nao ha como buscar um valor nulo\");\r\n\r\n        /** Se o valor do no seja nulo ou o valor seja achado no nó */\r\n        if (no == null || no.getValor() == valor) {\r\n            return no;\r\n        }\r\n\r\n        if (no.getValor().compareTo(valor) > 0) {\r\n            /** Se o valor do no for maior do que o valor inserido, vai pra esquerda */\r\n            return buscar(no.getFilhoEsquerdo(), valor);\r\n        }\r\n\r\n        /** Se o valor do no for menor do que o valor inserido, vai pra direita */\r\n        return buscar(no.getFilhoDireito(), valor);\r\n    }\r\n\r\n    public No remover(Object valor) throws Exception {\r\n\r\n        /***\r\n         * Metodo publico para a remocao de um valor na arvore\r\n         * @param valor recebe o valor a ser removido na arvore\r\n         * @exception Exception caso valor inserido seja nulo\r\n         * @return no removido da arvore\r\n         */\r\n\r\n        if (valor == null) throw new RuntimeException(\"Nao ha como remover um valor nulo\");\r\n\r\n        return removerRecursivo(this.raiz, valor);\r\n    }\r\n\r\n    private No removerRecursivo(No no, Object valor) {\r\n\r\n        /**\r\n         * Uma função recursiva para remover um valor na arvore, considerando que ha 3 casos\r\n         * @param no recebe o no a ser analizado e comparado com o valor a remover\r\n         * @param valor recebe o valor que sera removido na arvore\r\n         */\r\n\r\n        /** Se o no for igual a nulo */\r\n        if (no == null) return no;\r\n\r\n        /** CASO 1: Se o nao houver nenhum nó filho */\r\n        if (no.getValor().compareTo(valor) > 0) {\r\n            no.setFilhoEsquerdo(removerRecursivo(no.getFilhoEsquerdo(), valor));\r\n            return no;\r\n        } else if (no.getValor().compareTo(valor) < 0) {\r\n            no.setFilhoDireito(removerRecursivo(no.getFilhoDireito(), valor));\r\n            return no;\r\n        }\r\n\r\n        /** CASO 2: Se houver um nó filho */\r\n        if (no.getFilhoEsquerdo() == null) {\r\n            No temp = no.getFilhoDireito();\r\n            return temp;\r\n        } else if (no.getFilhoDireito() == null) {\r\n            No temp = no.getFilhoEsquerdo();\r\n            return temp;\r\n        }\r\n\r\n        /** CASO 3: Se houver dois nós filho */\r\n        else {\r\n            No noAuxiliar = no;\r\n\r\n            No noSucessor = no.getFilhoDireito();\r\n            while (noSucessor.getFilhoEsquerdo() != null) {\r\n                noAuxiliar = noSucessor;\r\n                noSucessor = noSucessor.getFilhoEsquerdo();\r\n            }\r\n            if (noAuxiliar != no)\r\n                noAuxiliar.setFilhoEsquerdo(noSucessor.getFilhoDireito());\r\n            else\r\n                noAuxiliar.setFilhoDireito(noSucessor.getFilhoDireito());\r\n\r\n            no.valor = noSucessor.valor;\r\n            \r\n            return no;\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public boolean estaVazia() {\r\n        \r\n        /**\r\n         * Retorna se a arvore esta vazia\r\n         * @return true se houver um ou mais nos na arvore\r\n         * @return false se nao houver elementos na arvore\r\n         */\r\n        \r\n        return this.raiz == null;\r\n    }\r\n\r\n    @Override\r\n    public void preOrdem(No no) {\r\n\r\n        /**\r\n         * Metodo para percorrer a arvore em forma de pre-ordem (visitacao, esquerda, direita)\r\n         * @param no recebe o no que sera analisado em pre-ordem\r\n         */\r\n\r\n        if (no == null) return;\r\n\r\n        no.visitar();\r\n        preOrdem(no.getFilhoEsquerdo());\r\n        preOrdem(no.getFilhoDireito());\r\n    }\r\n\r\n    @Override\r\n    public void emOrdem(No no) {\r\n\r\n        /**\r\n         * Metodo para percorrer a arvore em forma de em-ordem (esquerda, visitacao, direita)\r\n         * @param no recebe o no que sera analisado em em-ordem\r\n         */\r\n\r\n        if (no == null) return;\r\n\r\n        preOrdem(no.getFilhoEsquerdo());\r\n        no.visitar();\r\n        preOrdem(no.getFilhoDireito());\r\n    }\r\n\r\n    @Override\r\n    public void posOrdem(No no) {\r\n\r\n        /**\r\n         * Metodo para percorrer a arvore em forma de pos-ordem (esquerda, direita, visitacao)\r\n         * @param no recebe o no que sera analisado em pos-ordem\r\n         */\r\n\r\n        if (no == null) return;\r\n\r\n        preOrdem(no.getFilhoEsquerdo());\r\n        preOrdem(no.getFilhoDireito());\r\n        no.visitar();\r\n    }\r\n\r\n    ////////////////////////////////////////////////////////\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ArvoreBinariaBusca.java b/src/ArvoreBinariaBusca.java
+--- a/src/ArvoreBinariaBusca.java	(revision 05f9881c374e2e1fb43d5955678b421d986d3cf3)
++++ b/src/ArvoreBinariaBusca.java	(date 1696127888844)
+@@ -173,9 +173,9 @@
+ 
+         if (no == null) return;
+ 
+-        preOrdem(no.getFilhoEsquerdo());
++        emOrdem(no.getFilhoEsquerdo());
+         no.visitar();
+-        preOrdem(no.getFilhoDireito());
++        emOrdem(no.getFilhoDireito());
+     }
+ 
+     @Override
+@@ -188,8 +188,8 @@
+ 
+         if (no == null) return;
+ 
+-        preOrdem(no.getFilhoEsquerdo());
+-        preOrdem(no.getFilhoDireito());
++        posOrdem(no.getFilhoEsquerdo());
++        emOrdem(no.getFilhoDireito());
+         no.visitar();
+     }
+ 
