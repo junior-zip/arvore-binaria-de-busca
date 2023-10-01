@@ -68,12 +68,10 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
          * @param valor recebe o valor que sera removido na arvore
          */
 
-        // Base case
-        if (no == null)
-            return no;
+        /** Se o no for igual a nulo */
+        if (no == null) return no;
 
-        // Recursive calls for ancestors of
-        // No to be deleted
+        /** CASO 1: Se o nao houver nenhum nó filho */
         if (no.getValor().compareTo(valor) > 0) {
             no.setFilhoEsquerdo(removerRecursivo(no.getFilhoEsquerdo(), valor));
             return no;
@@ -82,10 +80,7 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
             return no;
         }
 
-        // We reach here when no is the No
-        // to be deleted.
-
-        // If one of the children is empty
+        /** CASO 2: Se houver um nó filho */
         if (no.getFilhoEsquerdo() == null) {
             No temp = no.getFilhoDireito();
             return temp;
@@ -94,44 +89,35 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
             return temp;
         }
 
-        // If both children exist
+        /** CASO 3: Se houver dois nós filho */
         else {
-
             No noAuxiliar = no;
 
-            // Find successor
-            No succ = no.getFilhoDireito();
-            while (succ.getFilhoEsquerdo() != null) {
-                noAuxiliar = succ;
-                succ = succ.getFilhoEsquerdo();
+            No noSucessor = no.getFilhoDireito();
+            while (noSucessor.getFilhoEsquerdo() != null) {
+                noAuxiliar = noSucessor;
+                noSucessor = noSucessor.getFilhoEsquerdo();
             }
-
-            // Delete successor.  Since successor
-            // is always getFilhoEsquerdo() child of its parent
-            // we can safely make successor's getFilhoDireito()
-            // getFilhoDireito() child as getFilhoEsquerdo() of its parent.
-            // If there is no succ, then assign
-            // succ.getFilhoDireito() to noAuxiliar.getFilhoDireito()
             if (noAuxiliar != no)
-                noAuxiliar.setFilhoEsquerdo(succ.getFilhoDireito());
+                noAuxiliar.setFilhoEsquerdo(noSucessor.getFilhoDireito());
             else
-                noAuxiliar.setFilhoDireito(succ.getFilhoDireito());
+                noAuxiliar.setFilhoDireito(noSucessor.getFilhoDireito());
 
-            // Copy Successor Data to no
-            no.valor = succ.valor;
-
-            // Delete Successor and return no
+            no.valor = noSucessor.valor;
+            
             return no;
         }
     }
 
     @Override
     public boolean estaVazia() {
+        
         /**
          * Retorna se a arvore esta vazia
          * @return true se houver um ou mais nos na arvore
          * @return false se nao houver elementos na arvore
          */
+        
         return this.raiz == null;
     }
 
