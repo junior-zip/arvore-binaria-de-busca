@@ -31,33 +31,45 @@
     → 3 - Se uma referência (filho esquerdo/direito de um nó raiz) nula é atingida, coloque o novo nó como sendo filho do nó-raiz.
     ### Exemplo
       ~~~JAVA
-      public void inserir_(No no, Object valor) throws Exception {
-        if (valor == null) {
-            throw new IllegalArgumentException("Valor não pode ser nulo.");
-        }
+       public void inserir(Object valor) throws Exception {
 
-        if (raiz == null) {
-            raiz = new No((Comparable) valor);
-        } else {
-            inserirRecursivo(raiz, valor);
-        }
+        /***
+         * Metodo publico para a insercao de um valor na arvore
+         * @exception Exception caso valor inserido seja nulo
+         * @param valor recebe o valor a ser inserido na arvore
+         */
+
+        if (valor == null) throw new RuntimeException("Nao ha como inserir um valor nulo");
+
+        this.raiz = inserirRecursivo(this.raiz, valor);
     }
 
-    public void inserir_Recursivo(No atual, T valor) throws Exception {
-        if (valor.compareTo((T) atual.getValor()) < 0) {
-            if (atual.getFilhoEsquerdo() == null) {
-                atual.setFilhoEsquerdo(new No(valor));
-            } else {
-                inserirRecursivo(atual.getFilhoEsquerdo(), valor);
-            }
-        } else {
-            if (atual.getFilhoDireito() == null) {
-                atual.setFilhoDireito(new No(valor));
-            } else {
-                inserirRecursivo(atual.getFilhoDireito(), valor);
-            }
+    private No inserirRecursivo(No no, Object valor) {
+
+        /**
+         * Um Metodo privado recursiva para inserir um novo valor na arvore
+         * @param no recebe o no a ser analizado e comparado com o valor a inserir
+         * @param valor recebe o valor que sera incluido na arvore
+         * @return o no atualizado com seu pai e filhos
+         */
+
+        if (no == null) {
+            /** Se o no for igual a nulo */
+            return new No((Comparable) valor);
         }
+
+        if (no.getValor().compareTo(valor) > 0) {
+            /** Se o valor do no for maior do que o valor inserido, vai pra esquerda */
+            no.setFilhoEsquerdo(inserirRecursivo(no.getFilhoEsquerdo(), valor));
+
+        } else if (no.getValor().compareTo(valor) < 0) {
+            /** Se o valor do no for menor do que o valor inserido, vai pra direita */
+            no.setFilhoDireito(inserirRecursivo(no.getFilhoDireito(), valor));
+        }
+
+        return no;
     }
+
     ~~~
 
     ### Passos do algoritmo de Busca: 
@@ -70,25 +82,30 @@
     → Caso o nó contendo o valor pesquisado seja encontrado, retorne o nó; caso contrário retorne nulo.
     ### Exemplo    
     ~~~JAVA
-    public No buscar(No no, Object valor) throws Exception{
-        No<T> ret;
+     public No buscar(No no, Object valor) throws Exception {
 
-        if(no == null){
-            throw new Exception("Operação incapaz de ser realizada!");
+        /**
+         * Metodo para buscar se o valor e existente dentro da arvore
+         * @param no recebe o no que sera comparado com o valor
+         * @param valor recebe o valor que tentara ser encontrado dentro da arvore
+         * @exception Exception caso o valor inserido seja nulo
+         * @return o no caso seja achado, caso nao, retorna null
+         */
 
-        }else if(no.getValor() == valor){
-            ret = (No<T>) no.getValor();
+        if (valor == null) throw new RuntimeException("Nao ha como buscar um valor nulo");
 
-        }else{
-
-            if(no.getValor().compareTo(valor) > 0){
-                ret =  buscar(no.getFilhoEsquerdo(), valor);
-
-            }else{
-                ret = buscar(no.getFilhoDireito(), valor);
-            }
+        /** Se o valor do no seja nulo ou o valor seja achado no nó */
+        if (no == null || no.getValor() == valor) {
+            return no;
         }
-        return ret;
+
+        if (no.getValor().compareTo(valor) > 0) {
+            /** Se o valor do no for maior do que o valor inserido, vai pra esquerda */
+            return buscar(no.getFilhoEsquerdo(), valor);
+        }
+
+        /** Se o valor do no for menor do que o valor inserido, vai pra direita */
+        return buscar(no.getFilhoDireito(), valor);
     }
     ~~~~
     ### Passos do algoritmo de Remoção:
