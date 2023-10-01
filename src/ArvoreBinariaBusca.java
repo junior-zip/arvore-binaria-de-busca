@@ -183,9 +183,9 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
 
         if (no == null) return;
 
-        preOrdem(no.getFilhoEsquerdo());
+        emOrdem(no.getFilhoEsquerdo());
         no.visitar();
-        preOrdem(no.getFilhoDireito());
+        emOrdem(no.getFilhoDireito());
     }
 
     @Override
@@ -198,8 +198,8 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
 
         if (no == null) return;
 
-        preOrdem(no.getFilhoEsquerdo());
-        preOrdem(no.getFilhoDireito());
+        posOrdem(no.getFilhoEsquerdo());
+        emOrdem(no.getFilhoDireito());
         no.visitar();
     }
 
