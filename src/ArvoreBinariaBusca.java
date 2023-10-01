@@ -149,16 +149,6 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> implements IArvoreBinar
     }
 
     @Override
-    public boolean estaCompleta() {
-        return false;
-    }
-
-    @Override
-    public int getAltura() {
-        return 0;
-    }
-
-    @Override
     public void preOrdem(No no) {
 
         /**

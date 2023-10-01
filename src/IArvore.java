@@ -4,7 +4,5 @@ public interface IArvore<T> {
     No remover(T valor) throws Exception;
     No buscar(No no, T valor) throws Exception;
     boolean estaVazia();
-    boolean estaCompleta();
-    int getAltura();
-    // void imprimirArvore();
+
 }
